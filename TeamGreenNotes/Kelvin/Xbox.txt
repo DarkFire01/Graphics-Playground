@@ -1,0 +1,8 @@
+The original Xbox has a Kelvin GPU.
+The xbox is easy to get a framebuffer setup for, as 
+the framebuffer lies extremely high in the memory.
+(the last couple MBs of memory); Mean we can use it quite easily
+without dealing with the GPUs registers much.
+
+Some seriously good information can be grabbed here:
+https://xboxdevwiki.net/Porting_an_Operating_System_to_the_Xbox_HOWTO#Video_Driver
