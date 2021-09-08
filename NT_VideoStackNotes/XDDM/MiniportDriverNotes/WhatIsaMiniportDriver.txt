@@ -1,0 +1,29 @@
+In a video driver, a miniport driver is one of the two major pieces needed
+for controlling your display, it is for handing resources and enumerating the device.
+There's a set of functions you need to create and assign to the driver entry in order for the miniport driver
+to be valid.
+
+Here's a dummy example of the driver entry:
+
+ULONG DriverEntry(PVOID pContext1, PVOID pContext2)
+{
+
+    VIDEO_HW_INITIALIZATION_DATA InitData;
+    VideoPortZeroMemory(&InitData, sizeof(VIDEO_HW_INITIALIZATION_DATA));
+
+    InitData.HwInitDataSize            = sizeof(VIDEO_HW_INITIALIZATION_DATA);
+    InitData.HwFindAdapter             = FuncNameYouWant_FindAdapter
+    InitData.HwInitialize              = FuncNameYouWant_Initialize;
+    InitData.HwStartIO                 = FuncNameYouWant_StartIO;
+    InitData.HwResetHw                 = FuncNameYouWant_ResetHW;
+    InitData.HwInterrupt               = FuncNameYouWant_VidInterrupt;
+    InitData.HwGetPowerState           = FuncNameYouWant_GetPowerState;
+    InitData.HwSetPowerState           = FuncNameYouWant_SetPowerState;
+    InitData.HwGetVideoChildDescriptor = FuncNameYouWant_GetChildDescriptor;
+
+    return VideoPortInitialize(pContext1, pContext2, 
+                               &InitData, NULL);
+}
+
+Everyone of the functions that get passed to VideoPortInitialize, has its own impelementation you created
+for your hardware.

@@ -1,0 +1,13 @@
+One of the first things done for the miniport driver occurs when the PnP manager requests the 
+graphics adapter to me start, this occurs by calling 
+HwVidFindAdapter
+When you have a minimally setup miniport driver for your card, you're gonna assign a function to this calling
+for example we will say FuncNameYouWant
+
+VP_STATUS 
+FuncNameYouWant_FindAdapter(PVOID HwDeviceExtension, 
+                            PVOID HwContext, PWSTR ArgumentString, 
+                            PVIDEO_PORT_CONFIG_INFO ConfigInfo, PUCHAR Again)
+{
+    /* here you'd put logic for your specfic card to indentify and start the card */
+}
