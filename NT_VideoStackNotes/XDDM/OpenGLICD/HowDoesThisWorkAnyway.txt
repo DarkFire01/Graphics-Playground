@@ -1,0 +1,28 @@
+Oh boy OpenGL on windows is fun
+OpenGL32 is a system file that manages the openGL ICD.
+See in windows the OpenGL implementations is seperate from the rest of the
+video stack. 
+The OGL ICD is its own driver with its own.. basic functions you as a driver maker
+supply for minimal setup. 
+
+DrvCopyContext
+DrvCreateContext
+DrvCreateLayerContext
+DrvDeleteContext
+DrvDescribeLayerPlane
+DrvDescribePixelFormat
+DrvGetProcAddress
+DrvGetLayerPaletteEntries
+DrvRealizeLayerPalette
+DrvReleaseContext
+DrvSetCallbackProcs
+DrvSetContext
+DrvSetLayerPaletteEntries
+DrvSetPixelFormatDrvShareLists
+DrvSwapBuffers
+DrvSwapLayerBuffers
+DrvValidateVersion
+LAYERPLANEDESCRIPTOR
+
+The ICD isn't the only way to do this. But it is the most interesting, as its very isolated and allows
+for some a very expansive driver and freedom
