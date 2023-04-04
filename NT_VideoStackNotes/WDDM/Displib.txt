@@ -1,0 +1,10 @@
+When creating a WDDM miniport driver you have to statically link
+to this library displib
+
+I've begun reverse enginering this library an decided to write my own!
+
+https://github.com/DarkFire01/Open_Displib
+
+I can't be sure the behavior is 1:1 with windows however its as compatible
+as i can make it via reversing with windbg, public docmentation. and compiling my own miniport
+and stepping through execution!

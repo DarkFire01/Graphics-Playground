@@ -1,0 +1,9 @@
+WIP WDDM Driver for QXL:
+https://github.com/freedesktop/spice-qxl-wddm-dod
+
+Simple Display only driver
+https://github.com/apriorit/simple-display-only-driver/tree/master/src
+
+Vbox WDDM driver:
+https://www.virtualbox.org/browser/vbox/trunk/src/VBox/Additions/WINNT/Graphics/Video/mp/wddm/VBoxWddm.inf
+

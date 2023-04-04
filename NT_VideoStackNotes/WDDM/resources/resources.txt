@@ -1,0 +1,23 @@
+
+Sadly the number of people that understand WDDM isn't very high.
+Reversing is difficult and it's a very unknown area,
+The only correct way i see to reverse this is to throw my OWN driver into
+windows vista and see how DXGKRNL handles everything via windbg.
+
+https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dispmprt/nc-dispmprt-dxgkddi_start_device
+
+Hooking the graphics kernel subsystem
+https://secret.club/2019/10/18/kernel_gdi_hook.html
+
+DirectX Graphics Kernel Subsystem (Dxgkrnl.sys) (github docs)
+https://github.com/MicrosoftDocs/windows-driver-docs/blob/staging/windows-driver-docs-pr/display/directx-graphics-kernel-subsystem.md
+
+Part 2: Display Miniport Hooking
+https://aviadshamriz.medium.com/part-2-display-miniport-hooking-e1a54661d2e1
+
+Zer0 day directx kernel hacking:
+https://www.zerodayinitiative.com/blog/2018/12/4/directx-to-the-kernel
+
+Tuesday, February 14, 2017
+Attacking the Windows NVIDIA Driver:
+https://googleprojectzero.blogspot.com/2017/02/attacking-windows-nvidia-driver.html
